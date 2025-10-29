@@ -1,0 +1,295 @@
+:root {
+  /* Core brand palette */
+  --brand-red: #ff0000;         /* primary action */
+  --brand-darkblue: #1a2a4b;    /* surfaces/nav/hero */
+  --brand-black: #000000;       /* deep sections/footer */
+
+  /* App-level tokens */
+  --bg: var(--brand-black);
+  --bg-elev: #0f1724;
+  --text: #e6edf3;
+  --muted: #9fb0c3;
+  --primary: var(--brand-red);
+  --primary-contrast: #ffffff;
+  --border: #223043;
+}
+
+/* === Typography: AKIRA EXPANDED (headlines, buttons, brand) === */
+@font-face {
+  font-family: "Akira Expanded";
+  src: url("AKIRA EXPANDED.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility alias */
+.font-display { font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+
+/* Apply to headings and key UI elements */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.navbar-brand,
+.btn-brand,
+.btn-primary,
+.btn-outline-primary {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Light theme */
+.light {
+  --bg: #ffffff;
+  --bg-elev: #f6f8fa;
+  --text: #0a0e14;
+  --muted: #4b5563;
+  --primary: #2563eb;
+  --primary-contrast: #ffffff;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.site-main {
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3.5vw + 1rem, 3.25rem);
+}
+
+.hero p {
+  margin: 0 auto 1.5rem;
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+.actions {
+  display: inline-flex;
+  gap: 0.75rem;
+}
+
+.button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  padding: 0.6rem 1rem;
+  border-radius: 0.55rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border), var(--text) 25%);
+}
+
+.button.primary {
+  background: var(--primary);
+  border-color: transparent;
+  color: var(--primary-contrast);
+}
+
+.features, .about, .contact {
+  margin-top: 3rem;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  border: 1px solid var(--border);
+  border-radius: 0.65rem;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--bg-elev), white 2%), var(--bg-elev));
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 0 3rem;
+  color: var(--muted);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not(.light) {
+    /* Keep defaults; users with light preference can toggle */
+  }
+}
+
+/* === Bootstrap overrides and utilities for brand colors === */
+
+.btn-primary {
+  --bs-btn-bg: var(--brand-red);
+  --bs-btn-border-color: var(--brand-red);
+  --bs-btn-hover-bg: #cc0000;
+  --bs-btn-hover-border-color: #cc0000;
+  --bs-btn-active-bg: #b30000;
+  --bs-btn-active-border-color: #b30000;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand-red);
+  --bs-btn-border-color: var(--brand-red);
+  --bs-btn-hover-bg: var(--brand-red);
+  --bs-btn-hover-border-color: var(--brand-red);
+  --bs-btn-active-bg: #b30000;
+  --bs-btn-active-border-color: #b30000;
+  color: white;
+  border: solid  1px white;
+}
+
+/* Custom brand button (independent of Bootstrap variables) */
+
+.btn-brand:hover { background-color: #cc0000; border-color: #cc0000; color: #ffffff; }
+.btn-brand:active { background-color: #b30000; border-color: #b30000; color: #ffffff; }
+.btn-brand:focus { outline: 0; box-shadow: 0 0 0 0.2rem rgba(255,0,0,0.35); }
+
+.bg-darkblue { background-color: var(--brand-darkblue) !important; }
+.bg-black { background-color: var(--brand-black) !important; }
+
+.navbar-dark.bg-darkblue .navbar-brand,
+.navbar-dark.bg-darkblue .nav-link,
+.navbar-dark.bg-darkblue .navbar-toggler {
+  color: rgba(255,255,255,.9);
+}
+.navbar-dark.bg-darkblue .nav-link:hover { color: #ffffff; }
+
+/* Make default text color inside brand-dark sections white for readability */
+.text-on-dark, .bg-darkblue, .bg-black { color: #ffffff; }
+
+/* Hero background image with brand-tinted overlay */
+.hero-bg {
+  background:
+   linear-gradient(rgb(0 0 0 / 1%), rgb(3 7 14 / 48%)), url(bg.jpg) bottom center / cover no-repeat
+}
+
+/* Intro gradient (deep black center with blue vignettes left/right) */
+.intro-bg {
+  background:
+    radial-gradient(60% 80% at -10% 50%, rgba(26,42,75,0.8), transparent 60%),
+    radial-gradient(60% 80% at 110% 50%, rgba(26,42,75,0.8), transparent 60%),
+    #000000;
+}
+
+#coach-spotlight.coach-bg {
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    url('ceelos.jpg') center center / cover no-repeat;
+}
+
+.btn-brand {
+  display: inline-block;
+  color: #ffffff;
+  background-color: var(--brand-red);
+  border: 1px solid var(--brand-red);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+#hero {
+  height: 70vh;
+    display: flex;
+    margin-top: -56px;
+    align-items: flex-end;
+}
+
+.text-red { color: var(--brand-red); }
+
+#intro {
+  height: 30vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#intro .text-width-small { max-width: 500px; }
+#intro .container { display: flex; flex-direction: column; align-items: center; }
+
+.btn-special {
+  background: red;
+  border-radius: 0;
+  color: white;
+  background-color: #1A2A4B;
+  h6 {
+    margin: 0;
+  }
+}
+
+p {
+  opacity: .75;
+}
+
+#coach-spotlight {
+  display: flex;
+  align-items: center;
+  height: 440px;
+}
+
+#why-we-train {
+
+}
