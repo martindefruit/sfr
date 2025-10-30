@@ -17,7 +17,7 @@
 /* === Typography: AKIRA EXPANDED (headlines, buttons, brand) === */
 @font-face {
   font-family: "Akira Expanded";
-  src: url("AKIRA EXPANDED.otf") format("opentype");
+  src: url("Akira Expanded Demo.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -255,7 +255,7 @@ body {
 #hero {
   height: 70vh;
     display: flex;
-    margin-top: -56px;
+    margin-top: -80px;
     align-items: flex-end;
 }
 
@@ -290,6 +290,170 @@ p {
   height: 440px;
 }
 
+/* --- Why We Train Section --- */
 #why-we-train {
+  min-height: 400px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  background: none;
+}
+#why-we-train .container { height: 100%; }
+#why-we-train-row { height: 100%; }
 
+
+.why-features-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.why-feature-card {
+  position: relative;
+  border: none;
+  color: white;
+  min-height: 110px;
+  padding: 2.2rem 2.1rem 2rem 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  overflow: hidden;
+}
+.why-feature-card .why-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+  filter: drop-shadow(0 6px 18px #ff000077);
+}
+.why-feature-card h3 {
+  font-size: 1.275rem;
+  margin-bottom: 0.4em;
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: #ff0000;
+  letter-spacing: 0.02em;
+}
+.why-feature-card p {
+  margin-bottom: 0;
+  color: #fff;
+  opacity: 0.80;
+}
+@media (max-width: 991px) {
+  #why-we-train .container, #why-we-train-row {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .why-label-col, .why-features-col { width: 100%; }
+  .why-feature-card {
+    min-height: 88px;
+    padding-left: 4.3rem;
+  }
+}
+
+/* --- Schedule Grid --- */
+#schedule { background:
+  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+  url('bg.jpg') center center / cover no-repeat; }
+#schedule .container { color: #ffffff; }
+
+.schedule-mobile {
+  padding: 11px;
+    background: #ffffff3b;
+    border-radius: 11px;
+    border: solid 1px #ffffff52;
+    backdrop-filter: blur(19px);
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(7, 1fr);
+  grid-template-rows: 72px 1fr 1fr 1fr 1fr; /* header + 4 bands */
+  gap: 12px;
+  align-items: stretch;
+  padding: 10px;
+  backdrop-filter: blur(11px);
+  border-radius: 19px;
+  border: solid 1px #ffffff38;
+}
+
+/* Header row */
+.schedule-header {
+  text-align: center;
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Time labels in first column */
+.schedule-time {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Base slot */
+.slot {
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.slot--open { background-color: var(--brand-red); color: #0b0f14; }
+.slot--drills { background-color: #000000; color: #ffffff; }
+.slot--closed { background-color: rgba(255,255,255,0.22); color: #ffffff; }
+
+/* Row span helpers */
+.slot--span-2 { grid-row: span 2; }
+.slot--span-3 { grid-row: span 3; }
+.slot--span-4 { grid-row: span 4; }
+
+/* Small cell label text */
+.slot small { display: block; font-size: 0.85rem; line-height: 1.1; opacity: 0.9; }
+
+@media (max-width: 991px) {
+  .schedule-grid { grid-template-columns: 100px repeat(7, 1fr); gap: 12px; }
+  .slot { padding: 14px; }
+}
+
+@media (max-width: 680px) {
+  .schedule-grid {
+    grid-template-columns: 1fr; /* stack */
+    grid-template-rows: auto;
+  }
+  .schedule-header, .schedule-time { justify-content: flex-start; }
+}
+
+.day-nav { overflow-x: auto; white-space: nowrap; gap: 6px; }
+.day-nav .nav-link {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.day-nav .nav-link.active { background-color: var(--brand-red); color: #0b0f14; border-color: var(--brand-red); }
+
+.day-block { margin-bottom: 1.25rem; }
+.day-title {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 15px;
+  opacity: 1;
+  margin-bottom: 0.5rem;
 }
