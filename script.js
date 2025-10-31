@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggle.setAttribute('aria-pressed', String(isLight));
     });
   }
+
+  // Services scroller
+  const track = document.getElementById('servicesTrack');
+  const prev = document.querySelector('.services-btn.prev');
+  const next = document.querySelector('.services-btn.next');
+  const scrollBy = () => (track?.firstElementChild?.getBoundingClientRect().width || 260) + 20;
+  if (track && prev && next) {
+    prev.addEventListener('click', () => track.scrollBy({ left: -scrollBy(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: scrollBy(), behavior: 'smooth' }));
+  }
 });
 
 

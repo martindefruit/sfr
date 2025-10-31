@@ -56,6 +56,19 @@ html, body {
   height: 100%;
 }
 
+.nav-link {
+  font-size: 1.25rem;
+  color: white;
+  /* opacity: .7; */
+  &.btn-special {
+    /* color: red */
+  }
+}
+
+.btn-special {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -201,6 +214,12 @@ body {
   --bs-btn-active-border-color: #b30000;
   color: white;
   border: solid  1px white;
+  border-radius: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
 }
 
 /* Custom brand button (independent of Bootstrap variables) */
@@ -271,12 +290,19 @@ body {
 #intro .container { display: flex; flex-direction: column; align-items: center; }
 
 .btn-special {
-  background: red;
+  /* background: red; */
   border-radius: 0;
   color: white;
   background-color: #1A2A4B;
   h6 {
     margin: 0;
+  }
+  &:hover {
+    background: red;
+  border-radius: 0;
+  color: white;
+  background-color: #1A2A4B;
+  opacity: .8;
   }
 }
 
@@ -296,11 +322,15 @@ p {
   display: flex;
   align-items: stretch;
   position: relative;
-  background: none;
 }
 #why-we-train .container { height: 100%; }
 #why-we-train-row { height: 100%; }
-
+.dark-text {
+  color: #192a4b;
+}
+.white-bg {
+  background: linear-gradient(rgb(255 255 255 / 90%), rgb(255 255 255 / 95%)), url(w-bg.jpg) bottom center / cover no-repeat;
+}
 
 .why-features-col {
   display: flex;
@@ -318,7 +348,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
   overflow: hidden;
 }
 .why-feature-card .why-icon {
@@ -351,11 +380,22 @@ p {
   .why-label-col, .why-features-col { width: 100%; }
   .why-feature-card {
     min-height: 88px;
-    padding-left: 4.3rem;
   }
 }
-
+.why-label-col {
+  h2 ,p {
+    color: #192a4b
+  }
+}
 /* --- Schedule Grid --- */
+#community {
+  min-height: 400px;
+    display: flex;
+    align-items: center;
+  background:
+  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+  url('bg-3.jpg') center center / cover no-repeat;
+}
 #schedule { background:
   linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
   url('bg.jpg') center center / cover no-repeat; }
@@ -456,4 +496,91 @@ p {
   font-size: 15px;
   opacity: 1;
   margin-bottom: 0.5rem;
+}
+
+/* --- Membership plan cards --- */
+.plan-card {
+  background: #161d29;
+  border: 1px solid #ffffff1f;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.plan-header { margin-bottom: .75rem; }
+.plan-name {
+  margin: 0 0 .25rem 0;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  display: flex; align-items: baseline; gap: .5rem;
+}
+.plan-price { color: var(--brand-red); font-weight: 700; }
+.plan-price .per { font-size: .8em; opacity: .9; margin-left: .1em; text-transform: lowercase; }
+.plan-sub { margin: 0; opacity: .85; }
+
+.plan-features { list-style: none; padding: 0; margin: .5rem 0 1rem; display: grid; gap: .75rem; }
+.plan-features li { padding-left: 1.75rem; position: relative; }
+.feat-title { display: block; font-weight: 600; }
+.feat-sub { display: block; opacity: .8; font-size: .95rem; }
+
+.calendar::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('calendar.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.infinite::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('infinite.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.gift::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('gift.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.diamond::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('diamond.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.crown::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('crown.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.star::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('star.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+.profile::before { content: ""; position: absolute; left: 0; top: .15rem; width: 1rem; height: 1rem; background: url('profile.svg') center/contain no-repeat; filter: drop-shadow(0 2px 6px rgba(255,0,0,.45)); }
+
+@media (min-width: 992px) {
+  .plan-card { padding: 1.5rem 1.5rem 1.25rem; }
+}
+
+/* --- Services tiles --- */
+.services-wrap { overflow-x: auto; }
+.services-track { display: flex; gap: 1.25rem; padding: .25rem; margin: 0; list-style: none; }
+.services-grid { }
+.service-tile {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  min-width: 0;
+  min-height: 160px;
+  border-radius: 4px;
+  border: 1px solid #ffffff26;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+}
+.service-tile span {
+  font-family: "Akira Expanded", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase; letter-spacing: .06em; line-height: 1.15;
+}
+
+.services-controls { gap: .5rem; }
+.services-btn {
+  width: 44px; height: 44px;
+  background: var(--brand-red);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 28px; line-height: 1; font-weight: 700;
+}
+.services-btn:disabled { opacity: .6; }
+
+footer a {
+  text-decoration: none;
+  color: white;
+  opacity: .8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* White hamburger icon for transparent navbar */
+.navbar-transparent .navbar-toggler {
+  border-color: rgba(255,255,255,0.85);
+}
+.navbar-transparent .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
