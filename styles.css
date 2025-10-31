@@ -281,7 +281,7 @@ body {
 .text-red { color: var(--brand-red); }
 
 #intro {
-  height: 30vh;
+  min-height: 30vh;
   align-items: center;
   display: flex;
   justify-content: center;
