@@ -20,6 +20,8 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -37,16 +39,35 @@
               <div class="collapse navbar-collapse justify-content-end" id="primaryNav">
                 <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
                   <!-- <li class="nav-item"><a class="nav-link" href="#program">Program</a></li> -->
-                  <li class="nav-item"><a class="lead nav-link" href="#memberships">Memberships</a></li>
-                  <li class="nav-item"><a class="lead nav-link" href="#schedule">Field & Schedule</a></li>
-            
-                  <li class="nav-item"><a class="nav-link btn btn-special" href="#schedule"><h6 class="m-0">Join Today</h6></a></li>
-
+                  <li class="nav-item"><a class="lead nav-link" href="#memberships" data-i18n="nav.memberships">Memberships</a></li>
+                  <li class="nav-item"><a class="lead nav-link" href="#schedule" data-i18n="nav.schedule">Field & Schedule</a></li>
+                  <li class="nav-item"><a class="nav-link btn btn-special" href="#schedule"><h6 class="m-0" data-i18n="cta.joinToday">Join Today</h6></a></li>
+                  
                   <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
-    
+                  
                 </ul>
             </div>
-        
+            <ul class="navbar-nav mb-0 ml-3">
+                <li class="nav-item d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="lang-switcher-btn" type="button" id="langSwitcher" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
+                    <svg class="lang-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span class="lang-text" id="langText">English</span>
+                    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langSwitcher">
+                    <li><a class="dropdown-item lang-option" href="#" data-lang="en">English</a></li>
+                    <li><a class="dropdown-item lang-option" href="#" data-lang="es">Español</a></li>
+                    </ul>
+                </div>
+                </li>
+            </ul>
           
           </nav>
         </header>
@@ -54,10 +75,10 @@
         <div class="container">
           <div class="row align-items-center g-4">
             <div class="col-lg-12">
-              <h4 class="opacity-75 text-uppercase small mb-2">Pro Paintball Training</h4>
-              <h1 id="hero-title" class="display-5 fw-bold">Train with <span class="text-red">purpose,</span> compete with <span class="text-red">confidence.</span></h1>
+              <h4 class="opacity-75 text-uppercase small mb-2" data-i18n="hero.kicker">Pro Paintball Training</h4>
+              <h1 id="hero-title" class="display-5 fw-bold" data-i18n="hero.title">Train with <span class="text-red">purpose,</span> compete with <span class="text-red">confidence.</span></h1>
               <div class="mt-3">
-                <a class="btn btn-brand btn-lg" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d">Join the Program</a>
+                <a class="btn btn-brand btn-lg" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d" data-i18n="cta.joinProgram">Join the Program</a>
               </div>
             </div>
           
@@ -68,9 +89,9 @@
       <!-- Intro/value statement with brief copy and CTA -->
       <section id="intro" aria-labelledby="intro-title" class="py-4 intro-bg text-on-dark">
         <div class="container text-center">
-          <h2 id="intro-title" class="h3">Built to help<br> players <span class="text-red">rise</span></h2>
-          <p class="lead mb-2 text-width-small">SFR is more than a paintball club. It’s a structured, community-driven system where players grow through training, mentorship, and accountability.</p>
-          <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6>Learn more</h6></a>
+          <h2 id="intro-title" class="h3" data-i18n="intro.title">Built to help<br> players <span class="text-red">rise</span></h2>
+          <p class="lead mb-2 text-width-small" data-i18n="intro.body">SFR is more than a paintball club. It’s a structured, community-driven system where players grow through training, mentorship, and accountability.</p>
+          <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6 data-i18n="cta.learnMore">Learn more</h6></a>
         </div>
       </section>
 
@@ -79,9 +100,9 @@
         <div class="container">
           <div class="row align-items-center g-4">
             <div class="col-lg-6">
-              <h2 id="coach-title" class="h2">Led by professionals who <span class="text-red">live the game</span></h2>
-              <p class="lead">Ceelos Cortes (X-Factor) leads the SFR program with years of experience in competitive paintball and player development. His approach blends discipline, creativity, and mentorship — helping athletes unlock their full potential both on and off the field.</p>
-              <a class="btn btn-special" href="https://www.instagram.com/ceelosmovez/?hl=en"><h6>Follow on Instagram</h6></a>
+              <h2 id="coach-title" class="h2"><span data-i18n="coach.prefix">Led by professionals who</span> <span class="text-red" data-i18n="coach.emphasis">live the game</span></h2>
+              <p class="lead" data-i18n="coach.body">Ceelos Cortes (X-Factor) leads the SFR program with years of experience in competitive paintball and player development. His approach blends discipline, creativity, and mentorship — helping athletes unlock their full potential both on and off the field.</p>
+              <a class="btn btn-special" href="https://www.instagram.com/ceelosmovez/?hl=en"><h6 data-i18n="cta.followInstagram">Follow on Instagram</h6></a>
             </div>
             
           </div>
@@ -93,26 +114,26 @@
         <div class="container h-100">
           <div class="row align-items-center h-100" id="why-we-train-row">
             <div class="col-lg-4 why-label-col">
-              <h2 id="why-title" class="h2 mb-3">Why we train</h2>
-              <p class="lead">The program is designed around one goal: <strong>growth through discipline, consistency, and community support.</strong></p>
-              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6>Learn more</h6></a>
+              <h2 id="why-title" class="h2 mb-3" data-i18n="why.title">Why we train</h2>
+              <p class="lead" data-i18n="why.description">The program is designed around one goal: <strong>growth through discipline, consistency, and community support.</strong></p>
+              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6 data-i18n="why.learnMore">Learn more</h6></a>
             </div>
             <br>
             <div class="col-lg-8 why-features-col">
               <div style="background: linear-gradient(rgba(26,42,75,0.8), rgba(0,0,0,0.5)), url('a.jpg') center center / cover no-repeat;" class="why-feature-card mb-3">
                 <img src="icon-3.svg" alt="Growth icon" class="why-icon" />
-                <h4>Growth</h4>
-                <p class="lead">Structured sessions that build skills progressively.</p>
+                <h4 data-i18n="why.growth.title">Growth</h4>
+                <p class="lead" data-i18n="why.growth.description">Structured sessions that build skills progressively.</p>
               </div>
               <div style="background: linear-gradient(rgba(26,42,75,0.8), rgba(0,0,0,0.5)), url('b.jpg') center center / cover no-repeat;" class="why-feature-card mb-3">
                 <img src="icon-2.svg" alt="Community icon" class="why-icon" />
-                <h4>Community</h4>
-                <p class="lead">Train alongside peers and mentors who raise the bar.</p>
+                <h4 data-i18n="why.community.title">Community</h4>
+                <p class="lead" data-i18n="why.community.description">Train alongside peers and mentors who raise the bar.</p>
               </div>
               <div  style="background: linear-gradient(rgba(26,42,75,0.8), rgba(0,0,0,0.5)), url('c.jpg') center center / cover no-repeat;" class="why-feature-card">
                 <img src="icon-1.svg" alt="Performance icon" class="why-icon" />
-                <h4>Performance</h4>
-                <p class="lead">Compete better under pressure through repeatable habits.</p>
+                <h4 data-i18n="why.performance.title">Performance</h4>
+                <p class="lead" data-i18n="why.performance.description">Compete better under pressure through repeatable habits.</p>
               </div>
             </div>
           </div>
@@ -122,23 +143,23 @@
       <!-- Schedule: section intro + accessible grid for weekly sessions -->
       <section id="schedule" aria-labelledby="schedule-title" class="intro-bg py-5 text-on-dark">
         <div class="container">
-          <h2 id="schedule-title" class="h2">Training & field schedule</h2>
-          <p class="lead">The field is open for both members and guest. Members access structured training sessions as part of their plan. gues can purchase a 1-time guest pass during open access hours for individual or team practice.</p>
+          <h2 id="schedule-title" class="h2" data-i18n="schedule.title">Training & field schedule</h2>
+          <p class="lead" data-i18n="schedule.lead">The field is open for both members and guest. Members access structured training sessions as part of their plan. gues can purchase a 1-time guest pass during open access hours for individual or team practice.</p>
 
           <!-- Mobile schedule (stacked, always visible) -->
           <div class="schedule-mobile d-lg-none" aria-label="Weekly schedule mobile">
             <div class="day-block">
-              <p class="lead day-title h5">Monday & Friday</p>
+              <p class="lead day-title h5" data-i18n="schedule.mobile.monFri">Monday & Friday</p>
               <div class="d-grid gap-2">
-                <div class="slot slot--closed">Closed</div>
+                <div class="slot slot--closed" data-i18n="schedule.closed">Closed</div>
               </div>
             </div>
             <div class="day-block">
-              <p class="lead day-title h5">Tue-Thu & Sat-Sun</p>
+              <p class="lead day-title h5" data-i18n="schedule.mobile.tueSun">Tue-Thu & Sat-Sun</p>
               <div class="d-grid gap-2">
-                <div class="slot slot--drills">NEO & PRO ONLY <br>(8–10am)</div>
-                <div class="slot slot--open">Open Play <br>(10am–4pm)</div>
-                <div class="slot slot--drills">NEO & PRO ONLY <br>(4–6pm)</div>
+                <div class="slot slot--drills" data-i18n="schedule.drills">NEO & PRO ONLY <br>(8–10am)</div>
+                <div class="slot slot--open" data-i18n="schedule.openPlay">Open Play <br>(10am–4pm)</div>
+                <div class="slot slot--drills" data-i18n="schedule.drills">NEO & PRO ONLY <br>(4–6pm)</div>
               </div>
             </div>
         
@@ -149,46 +170,46 @@
             <!-- Top-left empty cell -->
             <div></div>
             <!-- Day headers -->
-            <div class="schedule-header" role="columnheader" aria-label="Monday">Mon</div>
-            <div class="schedule-header" role="columnheader" aria-label="Tuesday">Tue</div>
-            <div class="schedule-header" role="columnheader" aria-label="Wednesday">Wed</div>
-            <div class="schedule-header" role="columnheader" aria-label="Thursday">Thu</div>
-            <div class="schedule-header" role="columnheader" aria-label="Friday">Fri</div>
-            <div class="schedule-header" role="columnheader" aria-label="Saturday">Sat</div>
-            <div class="schedule-header" role="columnheader" aria-label="Sunday">Sun</div>
+            <div class="schedule-header" role="columnheader" aria-label="Monday" data-i18n="schedule.day.mon">Mon</div>
+            <div class="schedule-header" role="columnheader" aria-label="Tuesday" data-i18n="schedule.day.tue">Tue</div>
+            <div class="schedule-header" role="columnheader" aria-label="Wednesday" data-i18n="schedule.day.wed">Wed</div>
+            <div class="schedule-header" role="columnheader" aria-label="Thursday" data-i18n="schedule.day.thu">Thu</div>
+            <div class="schedule-header" role="columnheader" aria-label="Friday" data-i18n="schedule.day.fri">Fri</div>
+            <div class="schedule-header" role="columnheader" aria-label="Saturday" data-i18n="schedule.day.sat">Sat</div>
+            <div class="schedule-header" role="columnheader" aria-label="Sunday" data-i18n="schedule.day.sun">Sun</div>
 
             <!-- Row 1: 8–10 AM -->
-            <div class="schedule-time" role="rowheader">8am to<br>10am</div>
-            <div class="slot slot--closed slot--span-4" role="gridcell" aria-label="Monday Closed">Closed</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--closed slot--span-4" role="gridcell" aria-label="Friday Closed">Closed</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
+            <div class="schedule-time" role="rowheader" data-i18n="schedule.time.morning">8am to<br>10am</div>
+            <div class="slot slot--closed slot--span-4" role="gridcell" aria-label="Monday Closed" data-i18n="schedule.closed">Closed</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--closed slot--span-4" role="gridcell" aria-label="Friday Closed" data-i18n="schedule.closed">Closed</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
 
             <!-- Row 2: 10 AM – 1 PM -->
-            <div class="schedule-time slot--span-2" role="rowheader"><p>10am to<br>4pm</p></div>
+            <div class="schedule-time slot--span-2" role="rowheader"><p data-i18n="schedule.time.midday">10am to<br>4pm</p></div>
             <!-- Monday covered by span -->
-            <div class="slot slot--open slot--span-2" role="gridcell">Open Play</div>
-            <div class="slot slot--open slot--span-2" role="gridcell">Open Play</div>
-            <div class="slot slot--open slot--span-2" role="gridcell">Open Play</div>
+            <div class="slot slot--open slot--span-2" role="gridcell" data-i18n="schedule.openPlayShort">Open Play</div>
+            <div class="slot slot--open slot--span-2" role="gridcell" data-i18n="schedule.openPlayShort">Open Play</div>
+            <div class="slot slot--open slot--span-2" role="gridcell" data-i18n="schedule.openPlayShort">Open Play</div>
             <!-- Friday covered by span -->
-            <div class="slot slot--open slot--span-2" role="gridcell">Open Play</div>
-            <div class="slot slot--open slot--span-2" role="gridcell">Open Play</div>
+            <div class="slot slot--open slot--span-2" role="gridcell" data-i18n="schedule.openPlayShort">Open Play</div>
+            <div class="slot slot--open slot--span-2" role="gridcell" data-i18n="schedule.openPlayShort">Open Play</div>
 
             <!-- Row 3: 1 PM – 4 PM (occupied by spans for Open Play) -->
             <!-- Cells spanned by Open Play above -->
 
             <!-- Row 4: 4 – 6 PM -->
-            <div class="schedule-time" role="rowheader">4pm to<br>6pm</div>
+            <div class="schedule-time" role="rowheader" data-i18n="schedule.time.evening">4pm to<br>6pm</div>
             <!-- Monday still closed via span -->
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
             <!-- Friday still closed via span -->
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
-            <div class="slot slot--drills" role="gridcell">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
+            <div class="slot slot--drills" role="gridcell" data-i18n="schedule.drillsShort">NEO & PRO ONLY</div>
           </div>
         </div>
       </section>
@@ -203,9 +224,9 @@
               </figure>
             </div>
             <div class="col-lg-6 dark-text">
-              <h2 id="campus-title" class="h2">Supra Campus</h2>
-              <p class="lead">Our home field is designed for competition and growth, with dedicated arenas, weekly and weekend access, and community-built focus.</p>
-              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6>Learn more</h6></a>
+              <h2 id="campus-title" class="h2" data-i18n="campus.title">Supra Campus</h2>
+              <p class="lead" data-i18n="campus.description">Our home field is designed for competition and growth, with dedicated arenas, weekly and weekend access, and community-built focus.</p>
+              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6 data-i18n="campus.learnMore">Learn more</h6></a>
             </div>
           </div>
         </div>
@@ -214,88 +235,246 @@
       <!-- Membership tiers: three cards with actions -->
       <section id="memberships" aria-labelledby="memberships-title" class="py-5">
         <div class="container">
-          <p class="text-center text-red mb-1" style="text-transform:uppercase; letter-spacing:.08em;">Memberships Tiers</p>
-          <h2 id="memberships-title" class="h2 text-center font-display">Choose your path to progress</h2>
-          <p class="text-center lead mb-4">Our memberships are designed to match your commitment level — from weekend warriors to full-time competitors. Each tier gives you access to structured training, community, and perks that fit your goals.</p>
+          <p class="text-center text-red mb-1" style="text-transform:uppercase; letter-spacing:.08em;" data-i18n="memberships.tiers">Memberships Tiers</p>
+          <h2 id="memberships-title" class="h2 text-center font-display" data-i18n="memberships.title">Choose your path to progress</h2>
+          <p class="text-center lead mb-4" data-i18n="memberships.description">Our memberships are designed to match your commitment level — from weekend warriors to full-time competitors. Each tier gives you access to structured training, community, and perks that fit your goals.</p>
 
-          <div class="row g-4" aria-label="Membership tiers">
-            <!-- CLUB -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="plan-card h-100">
-                <header class="plan-header">
-                  <h5 class="plan-name">Club<span class="plan-price">$75<span class="per">/month</span></span></h5>
-                  <p class="plan-sub">Entry-level membership for consistent weekend training.</p>
-                </header>
-                <ul class="plan-features">
-                  <li class="calendar"><span class="feat-title">Field Access</span><span class="feat-sub">4 weekend + 4 midweek sessions</span></li>
-                  <li class="gift"><span class="feat-title">Basic Perks</span><span class="feat-sub">Cold Water, Online Community</span></li>
-                  <li class="profile"><span class="feat-title">Coaching</span><span class="feat-sub">Positional Calls & Drills</span></li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/checkout/club-member">Join</a>
-                </div>
-              </article>
-            </div>
+          <!-- Tier Cards -->
+          <div class="tier-cards-wrapper">
+            <div class="row g-4 mb-5" aria-label="Membership tiers">
+              <!-- CLUB -->
+              <div class="col-4 col-md-6 col-lg-4">
+                <article class="plan-card h-100">
+                  <header class="plan-header text-center">
+                    <h5 class="plan-name"><span data-i18n="memberships.plan.club">Club</span><span class="plan-price">$75<span class="per" data-i18n="memberships.perMonth">/month</span></span></h5>
+                    <p class="plan-sub" data-i18n="memberships.plan.club.desc">Entry-level membership for consistent weekend training.</p>
+                  </header>
+                  <div class="mt-auto">
+                    <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d" data-i18n="memberships.join">Join</a>
+                  </div>
+                </article>
+              </div>
 
-            <!-- NEO -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="plan-card h-100">
-                <header class="plan-header">
-                  <h5 class="plan-name">Neo <span class="plan-price">$150<span class="per">/month</span></span></h5>
-                  <p class="plan-sub">For dedicated athletes competing regularly.</p>
-                </header>
-                <ul class="plan-features">
-                  <li class="calendar"><span class="feat-title">Field Access</span><span class="feat-sub">8 weekend + 8 midweek sessions</span></li>
-                  <li class="profile"><span class="feat-title">Private Coaching</span><span class="feat-sub">Monthly evaluations, 1:1 calls, drills</span></li>
-                  <li class="star"><span class="feat-title">Premium Perks</span><span class="feat-sub">Premium drinks, Extended Hours</span></li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/checkout/neo-member">Join</a>
-                </div>
-              </article>
-            </div>
+              <!-- NEO -->
+              <div class="col-4 col-md-6 col-lg-4">
+                <article class="plan-card h-100">
+                  <header class="plan-header text-center">
+                    <h5 class="plan-name"><span data-i18n="memberships.plan.neo">Neo</span> <span class="plan-price">$150<span class="per" data-i18n="memberships.perMonth">/month</span></span></h5>
+                    <p class="plan-sub" data-i18n="memberships.plan.neo.desc">For dedicated athletes competing regularly.</p>
+                  </header>
+                  <div class="mt-auto">
+                    <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d" data-i18n="memberships.join">Join</a>
+                  </div>
+                </article>
+              </div>
 
-            <!-- PRO -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <article class="plan-card h-100">
-                <header class="plan-header">
-                  <h5 class="plan-name">Pro <span class="plan-price">$350<span class="per">/month</span></span></h5>
-                  <p class="plan-sub">Full-access membership for serious competitors.</p>
-                </header>
-                <ul class="plan-features">
-                  <li class="infinite"><span class="feat-title">Field Access</span><span class="feat-sub">Unlimited</span></li>
-                  <li class="crown"><span class="feat-title">PRO Coaching</span><span class="feat-sub">Private coaching with Ceelos.</span></li>
-                  <li class="star"><span class="feat-title">PRO Perks</span><span class="feat-sub">Same as NEO + much more</span></li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/checkout/pro-member">Join</a>
-                </div>
-              </article>
+              <!-- PRO -->
+              <div class="col-4 col-md-6 col-lg-4">
+                <article class="plan-card h-100">
+                  <header class="plan-header text-center">
+                    <h5 class="plan-name"><span data-i18n="memberships.plan.pro">Pro</span> <span class="plan-price">$350<span class="per" data-i18n="memberships.perMonth">/month</span></span></h5>
+                    <p class="plan-sub" data-i18n="memberships.plan.pro.desc">Full-access membership for serious competitors.</p>
+                  </header>
+                  <div class="mt-auto">
+                    <a class="btn btn-brand w-100" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d" data-i18n="memberships.join">Join</a>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
-        </div>
+
+          <!-- Comparison Table - Desktop -->
+          <div class="comparison-table">
+            <!-- Column Headers -->
+            <div class="comparison-row comparison-header-row">
+              <div class="first comparison-category"></div>
+              <div class="comparison-value font-display" data-i18n="memberships.plan.club">Club</div>
+              <div class="comparison-value font-display" data-i18n="memberships.plan.neo">Neo</div>
+              <div class="comparison-value font-display" data-i18n="memberships.plan.pro">Pro</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-category white-bg">
+                <span data-i18n="memberships.compare.entryFee">Entry Fee</span>
+                <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.entryFee"></i>
+              </div>
+             
+              <div class="comparison-value" data-tier="Club" data-i18n="memberships.compare.club.entryFee">$20</div>
+              <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.entryFee">$15</div>
+              <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.entryFee">$0</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-category white-bg">
+                <span data-i18n="memberships.compare.fieldAccess">Field Access</span>
+                <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.fieldAccess"></i>
+              </div>
+              <div class="comparison-value" data-tier="Club" data-i18n="memberships.compare.club.fieldAccess">4 Weekend / 4 Midweek</div>
+              <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.fieldAccess">8 Weekend / 8 Midweek</div>
+              <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.fieldAccess">Unlimited</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-category white-bg">
+                <span data-i18n="memberships.compare.paint">Paint</span>
+                <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.paint"></i>
+              </div>
+              <div class="comparison-value" data-tier="Club" data-i18n="memberships.compare.club.paint">$55 Case</div>
+              <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.paint">$50 Case</div>
+              <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.paint">$45 Case</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-category white-bg">
+                <span data-i18n="memberships.compare.extendedHours">Extended Hours</span>
+                <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.extendedHours"></i>
+              </div>
+              <div class="comparison-value" data-tier="Club" data-i18n="memberships.compare.club.extendedHours">No</div>
+              <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.extendedHours">Yes</div>
+              <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.extendedHours">Yes</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-category white-bg">
+                <span data-i18n="memberships.compare.byop">BYOP</span>
+                <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.byop"></i>
+              </div>
+              <div class="comparison-value" data-tier="Club" data-i18n="memberships.compare.club.byop">BYOP $45 Fee/Case</div>
+              <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.byop">BYOP $35 Fee/Case</div>
+              <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.byop">BYOP $25 Fee/Case</div>
+            </div>
+            
+            <!-- Collapsible: Field + Store Perks -->
+            <div class="comparison-section d-none d-md-block">
+              <div class="comparison-row comparison-header" data-bs-toggle="collapse" data-bs-target="#perksCollapse" aria-expanded="true" aria-controls="perksCollapse">
+                <div class="comparison-category">
+                  <span data-i18n="memberships.compare.perks">Field + Store Perks</span>
+                  <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.perks" onclick="event.stopPropagation();"></i>
+                </div>
+                <div class="comparison-value text-red" data-tier="Club" data-i18n="memberships.compare.none">None</div>
+                <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.perks">Premium Perks</div>
+                <div class="comparison-value" data-tier="Pro">
+                  <span data-i18n="memberships.compare.pro.perks">Pro Perks</span>
+                  <svg class="collapse-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="collapse show" id="perksCollapse">
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.parking">Priority Parking</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.parking">VIP Parking</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.staging">Table Staging</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.staging">Prop Staging</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.drinks">Free Premium Drinks</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.drinks">Free Premium Drink & Snacks</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Collapsible: Private Training -->
+            <div class="comparison-section d-none d-md-block">
+              <div class="comparison-row comparison-header" data-bs-toggle="collapse" data-bs-target="#trainingCollapse" aria-expanded="false" aria-controls="trainingCollapse">
+                <div class="comparison-category">
+                  <span data-i18n="memberships.compare.training">Private Training</span>
+                  <i class="bi bi-info-circle info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="" data-i18n-tooltip="memberships.tooltip.training" onclick="event.stopPropagation();"></i>
+                </div>
+                <div class="comparison-value text-red" data-tier="Club" data-i18n="memberships.compare.none">None</div>
+                <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.training">Private Coaching</div>
+                <div class="comparison-value" data-tier="Pro">
+                  <span data-i18n="memberships.compare.pro.training">Pro Coaching</span>
+                  <svg class="collapse-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="collapse" id="trainingCollapse">
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.coreTraining">Warm-ups, team skills, communication, drills, situationals</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.coreTraining">Warm-ups, team skills, communication, drills, situationals</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.playerEvaluation">Quarterly player evaluation</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.playerEvaluation">Monthly player evaluation</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.coachingCall">Weekly coaching call (1 hour)</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.coachingCall">Weekly coaching call (1 hour)</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo" data-i18n="memberships.compare.neo.privateSession">1x private training (30 min), 10% off</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.privateSession">1x private training (1 hr), 20% off</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo">-</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.fitnessAssessment">Fitness assessment</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo">-</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.nutritionManagement">Nutrition management</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo">-</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.videoBreakdown">Video breakdown</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo">-</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.performanceDashboard">Performance dashboard</div>
+                </div>
+                <div class="comparison-row comparison-sub">
+                  <div class="comparison-category"></div>
+                  <div class="comparison-value" data-tier="Club">-</div>
+                  <div class="comparison-value" data-tier="Neo">-</div>
+                  <div class="comparison-value" data-tier="Pro" data-i18n="memberships.compare.pro.sfrUnited">SFR United eligibility</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
       </section>
 
       <!-- Add-on coaching services carousel scaffold -->
       <section id="services" aria-labelledby="services-title" class="py-5 white-bg">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center mb-3 dark-text">
-            <h2 id="services-title" class="h2 m-0 font-display">Add on coaching services</h2>
+            <h2 id="services-title" class="h2 m-0 font-display" data-i18n="services.title">Add on coaching services</h2>
           </div>
 
           <div class="services-grid">
             <div class="row g-3">
               <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <article class="service-tile h-100"><span>Personal<br>Player<br>Evaluation</span></article>
+                <article class="service-tile h-100"><span data-i18n="services.personalEval">Personal<br>Player<br>Evaluation</span></article>
               </div>
               <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <article class="service-tile h-100"><span>Ceelos<br>Player<br>Evaluation</span></article>
+                <article class="service-tile h-100"><span data-i18n="services.ceelosEval">Ceelos<br>Player<br>Evaluation</span></article>
               </div>
               <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <article class="service-tile h-100"><span>Private<br>Training</span></article>
+                <article class="service-tile h-100"><span data-i18n="services.privateTraining">Private<br>Training</span></article>
               </div>
               <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <article class="service-tile h-100"><span>Ceelos<br>Private<br>Training</span></article>
+                <article class="service-tile h-100"><span data-i18n="services.ceelosPrivate">Ceelos<br>Private<br>Training</span></article>
               </div>
              
             </div>
@@ -308,9 +487,9 @@
         <div class="container">
           <div class="row g-4 align-items-center">
             <div class="col-lg-12 text-center">
-              <h2 id="community-title" class="h2">A team beyond,<br> the field</h2>
-              <p class="lead text-width-small">The SFR community connects players year-round through our private Circle platform — with chat, training content, and live coaching sessions. It's where the game continues when the weekend ends.</p>
-              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6>Join Our Community</h6></a>
+              <h2 id="community-title" class="h2" data-i18n="community.title">A team beyond,<br> the field</h2>
+              <p class="lead text-width-small" data-i18n="community.description">The SFR community connects players year-round through our private Circle platform — with chat, training content, and live coaching sessions. It's where the game continues when the weekend ends.</p>
+              <a class="btn btn-special" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d"><h6 data-i18n="community.join">Join Our Community</h6></a>
             </div>
           </div>
         </div>
@@ -326,8 +505,8 @@
               </figure>
             </div>
             <div class="col-lg-6">
-              <h2 id="final-cta-title" class="h2">Find your level & start your journey</h2>
-              <p class="mb-0"><a class="btn btn-brand btn-lg" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d">Join the program</a></p>
+              <h2 id="final-cta-title" class="h2" data-i18n="finalCta.title">Find your level & start your journey</h2>
+              <p class="mb-0"><a class="btn btn-brand btn-lg" href="https://south-florida-rise.circle.so/join?invitation_token=6b4360ef7508abf2f667f5aeb14eda59c1b32dcc-e6454d18-85e4-4a83-b94d-48119f1c211d" data-i18n="finalCta.join">Join the program</a></p>
             </div>
           </div>
         </div>
@@ -342,7 +521,7 @@
           <div class="col-md-4">
             <a class="navbar-brand fw-bold" href="/" aria-label="SFR home"><img width="150px" src="logo.png" alt="SFR" class="why-icon" /></a>
             <br>
-            <p class="small mb-0">© <span id="year"></span> SFR. All rights reserved.</p>
+            <p class="small mb-0">© <span id="year"></span> <span data-i18n="footer.copyright">SFR. All rights reserved.</span></p>
           </div>
           <div class="col-md-4">
             <!-- <nav aria-label="Sitemap">
@@ -356,7 +535,7 @@
           </div>
           <div class="col-md-4">
             <section aria-labelledby="contact-title">
-              <h3 id="contact-title" class="h6">Contact</h3>
+              <h3 id="contact-title" class="h6" data-i18n="footer.contact">Contact</h3>
               <address class="mb-2">
                 <a href="mailto:sfrpaintball@gmail.com">sfrpaintball@gmail.com</a><br>
                 <a href="tel:+17206144944">+1 720-614-4944</a>
