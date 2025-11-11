@@ -119,7 +119,7 @@ const translations = {
 
     // Membership Comparison
     'memberships.compare.entryFee': 'Entry Fee',
-    'memberships.compare.club.entryFee': '$10',
+    'memberships.compare.club.entryFee': '$20',
     'memberships.compare.neo.entryFee': '$15',
     'memberships.compare.pro.entryFee': '$10 / Free Weekdays',
     'memberships.compare.fieldAccess': 'Field Access',
@@ -290,7 +290,7 @@ const translations = {
 
     // Comparación de Membresías
     'memberships.compare.entryFee': 'Tarifa de Entrada',
-    'memberships.compare.club.entryFee': '$10',
+    'memberships.compare.club.entryFee': '$20',
     'memberships.compare.neo.entryFee': '$15',
     'memberships.compare.pro.entryFee': '$10 / Gratis entre Semana',
     'memberships.compare.fieldAccess': 'Acceso al Campo',
