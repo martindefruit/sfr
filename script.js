@@ -49,7 +49,7 @@ const translations = {
     // Coach
     'coach.prefix': 'Led by professionals who',
     'coach.emphasis': 'live the game',
-    'coach.body': 'Ceelos Cortes (X-Factor) leads the SFR program with years of experience in competitive paintball and player development. His approach blends discipline, creativity, and mentorship — helping athletes unlock their full potential both on and off the field.',
+    'coach.body': 'Ceelos Cortes (X-Factor) leads the SFR program with years of experience in competitive paintball and player development.',
 
     // Why We Train
     'why.title': 'Why we train',
@@ -61,6 +61,21 @@ const translations = {
     'why.community.description': 'Train alongside peers and mentors who raise the bar.',
     'why.performance.title': 'Performance',
     'why.performance.description': 'Compete better under pressure through repeatable habits.',
+
+    // Program Wins
+    'wins.title': 'PROGRAM WINS',
+    'wins.description': 'Out member team have won multiple championships and awards.',
+    'wins.achievement1.title': 'MVPS WINNERS',
+    'wins.achievement1.subtitle': 'SOUTHEASTERN 20 MVPS 25 CHAMPIONSHIP',
+    'wins.achievement1.team': 'SUPRA FILIUS',
+    'wins.achievement1.division': 'D5 XBALL',
+    'wins.achievement2.title': '2025 NXL LONE STAR MAJOR',
+    'wins.achievement2.subtitle': 'TEAM PROGRAM',
+    'wins.achievement2.team': 'SUPRA FILIUS',
+    'wins.achievement2.division': 'D5 XBALL - 3RD PLACE',
+    'wins.achievement3.title': 'Congratulations',
+    'wins.achievement3.team': '@suprapaintball',
+    'wins.achievement3.division': '2nd Place',
 
     // Schedule
     'schedule.title': 'Training & field schedule',
@@ -232,6 +247,21 @@ const translations = {
     'why.community.description': 'Entrena junto a compañeros y mentores que elevan el nivel.',
     'why.performance.title': 'Rendimiento',
     'why.performance.description': 'Compite mejor bajo presión con hábitos repetibles.',
+
+    // Victorias del Programa
+    'wins.title': 'VICTORIAS DEL PROGRAMA',
+    'wins.description': 'Nuestro campo privado es donde los jugadores desarrollan confianza, química y consistencia. Diseñado para entrenamiento, competencia y crecimiento, es el hogar de South Florida Rise.',
+    'wins.achievement1.title': 'GANADORES MVPS',
+    'wins.achievement1.subtitle': 'CAMPEONATO SOUTHEASTERN 20 MVPS 25',
+    'wins.achievement1.team': 'SUPRA FILIUS',
+    'wins.achievement1.division': 'D5 XBALL',
+    'wins.achievement2.title': '2025 NXL LONE STAR MAJOR',
+    'wins.achievement2.subtitle': 'PROGRAMA DEL EQUIPO',
+    'wins.achievement2.team': 'SUPRA FILIUS',
+    'wins.achievement2.division': 'D5 XBALL - 3ER LUGAR',
+    'wins.achievement3.title': 'Felicitaciones',
+    'wins.achievement3.team': '@suprapaintball',
+    'wins.achievement3.division': '2do Lugar',
 
     // Horario
     'schedule.title': 'Horario de entrenamiento y campo',

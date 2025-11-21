@@ -281,21 +281,162 @@ body {
 /* Hero background image with brand-tinted overlay */
 .hero-bg {
   background:
-   linear-gradient(rgb(0 0 0 / 1%), rgb(3 7 14 / 48%)), url(bg.jpg) bottom center / cover no-repeat
+   linear-gradient(rgb(0 0 0 / 1%), rgb(3 7 14 / 48%)), url(bg.jpg) top right / cover no-repeat
 }
 
 /* Intro gradient (deep black center with blue vignettes left/right) */
 .intro-bg {
-  background:
-    radial-gradient(60% 80% at -10% 50%, rgba(26,42,75,0.8), transparent 60%),
-    radial-gradient(60% 80% at 110% 50%, rgba(26,42,75,0.8), transparent 60%),
-    #000000;
+  background: linear-gradient(rgb(0 0 0 / 56%), rgb(3 7 14 / 84%)), url(ceelos_collagebg.png) top center / cover no-repeat;
 }
 
 #coach-spotlight.coach-bg {
   background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
     url('ceelos.jpg') center center / cover no-repeat;
+}
+
+/* Hide background image on mobile */
+@media (max-width: 991.98px) {
+  #coach-spotlight.coach-bg {
+    background: none;
+  }
+}
+
+/* Mobile image styling */
+.coach-mobile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Program Wins Section */
+
+#why-title {
+  color: #192a4b;
+}
+.win-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 3 / 4;
+  background: #000;
+}
+
+.win-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.win-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7) 100%);
+}
+
+.win-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: auto;
+  max-width: fit-content;
+}
+
+.win-badge-first {
+  background: rgba(26, 42, 75, 0.95);
+}
+
+.win-badge-second {
+  background: rgba(128, 128, 128, 0.95);
+}
+
+.win-badge-third {
+  background: rgba(128, 128, 128, 0.95);
+}
+
+.win-medal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.win-badge-second .win-medal {
+  background: #C0C0C0;
+}
+
+.win-badge-third .win-medal {
+  background: #CD7F32;
+  color: #fff;
+}
+
+.win-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.win-team {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.win-division {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+}
+
+.win-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.win-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.95);
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 767.98px) {
+  .win-overlay {
+    padding: 1rem;
+  }
+  
+  .win-title {
+    font-size: 1.25rem;
+  }
+  
+  .win-team {
+    font-size: 1.1rem;
+  }
+  
+  .win-medal {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
 }
 
 .btn-brand {
@@ -309,7 +450,7 @@ body {
 }
 
 #hero {
-  height: 70vh;
+  height: 80vh;
     display: flex;
     margin-top: -80px;
     align-items: flex-end;
@@ -318,7 +459,8 @@ body {
 .text-red { color: var(--brand-red); }
 
 #intro {
-  min-height: 30vh;
+  margin: 30px;
+  min-height: 40vh;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -350,7 +492,7 @@ p {
 #coach-spotlight {
   display: flex;
   align-items: center;
-  height: 440px;
+  min-height: 440px;
 }
 
 /* --- Why We Train Section --- */
