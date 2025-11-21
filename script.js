@@ -195,7 +195,7 @@ const translations = {
     'memberships.tooltip.training': 'Coaching and training services for each membership tier',
 
     // Community
-    'community.title': 'A team beyond,<br> the field',
+    'community.title': 'A team beyond<br> the field',
     'community.description': 'The SFR community connects players year-round through our private Circle platform — with chat, training content, and live coaching sessions. It\'s where the game continues when the weekend ends.',
     'community.join': 'Join Our Community',
 
