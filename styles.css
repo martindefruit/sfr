@@ -290,7 +290,12 @@ body {
 .intro-bg {
   background: linear-gradient(rgb(0 0 0 / 56%), rgb(3 7 14 / 84%)), url(ceelos_collagebg.jpg) top center / cover no-repeat;
 }
-
+.text-on-light {
+  color: #192a4b;
+  p {
+    opacity: .7;
+  }
+}
 #coach-spotlight.coach-bg {
   background:
     url('ceelos.jpg') center center / cover no-repeat;
@@ -579,8 +584,7 @@ p {
   url('bg-3.jpg') center center / cover no-repeat;
 }
 #schedule { background:
-  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
-  url('bg.jpg') center center / cover no-repeat; }
+  linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)); }
 #schedule .container { color: #ffffff; }
 
 .schedule-mobile {
@@ -646,7 +650,7 @@ p {
   text-transform: uppercase;
 }
 .slot--open { background-color: var(--brand-red); color: #0b0f14; }
-.slot--drills { background-color: #000000; color: #ffffff; }
+.slot--drills { background-color: #1a2a4b; color: #ffffff; }
 .slot--closed { background-color: rgba(255,255,255,0.22); color: #ffffff; }
 
 /* Row span helpers */

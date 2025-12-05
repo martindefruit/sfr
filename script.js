@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   en: {
     // Navigation
-    'nav.memberships': 'Memberships',
+    'nav.memberships': 'The Program',
     'nav.schedule': 'Field & Schedule',
     'cta.joinToday': 'Join Today',
-    'cta.joinProgram': 'become a member',
-    'cta.visitField': 'Visit the Field',
+    'cta.joinProgram': 'JOIN THE PRO PROGRAM',
+    'cta.visitField': 'Visit Field',
     'cta.learnMore': 'Learn more',
     'cta.followInstagram': 'Follow on Instagram',
 
@@ -52,12 +52,12 @@ const translations = {
     'coach.title': 'Want to move on the paintball field like Ceelos?',
     'coach.body': 'Sign up for the PRO program and access Ceelo\'s 90-day challenge—designed to push your limits and help you become the best version of yourself, on and off the field. You\'ll follow a structured meal plan and workout program that took him over 10 years to refine—backed by his journey to playing on the top professional teams in the sport.',
     'coach.subtitle': 'We are a field + we have this training system that is run by Ceelos.',
-    'coach.cta': 'become a member',
+    'coach.cta': 'JOIN THE PRO PROGRAM',
 
     // Why We Train
     'why.title': 'Why we train',
     'why.description': 'The program is designed around one goal: <strong>growth through discipline, consistency, and community support.</strong>',
-    'why.learnMore': 'become a member',
+    'why.learnMore': 'JOIN THE PRO PROGRAM',
     'why.growth.title': 'Growth',
     'why.growth.description': 'Structured sessions that build skills progressively.',
     'why.community.title': 'Community',
@@ -109,8 +109,8 @@ const translations = {
     'memberships.title': 'Choose your path to progress',
     'memberships.description': 'Our memberships are designed to match your commitment level — from weekend warriors to full-time competitors. Each tier gives you access to structured training, community, and perks that fit your goals.',
     'memberships.perMonth': '/month',
-    'memberships.join': 'become a member',
-    'memberships.joinPro': 'become a member',
+    'memberships.join': 'JOIN THE PRO PROGRAM',
+    'memberships.joinPro': 'JOIN THE PRO PROGRAM',
     'memberships.plan.club': 'Club',
     'memberships.plan.club.desc': 'Entry-level membership for consistent weekend training.',
     'memberships.plan.neo': 'Neo',
@@ -205,11 +205,11 @@ const translations = {
     // Community
     'community.title': 'A team beyond<br> the field',
     'community.description': 'The SFR community connects players year-round through our private Circle platform — with chat, training content, and live coaching sessions. It\'s where the game continues when the weekend ends.',
-    'community.join': 'become a member',
+    'community.join': 'JOIN THE PRO PROGRAM',
 
     // Final CTA
     'finalCta.title': 'Find your level & start your journey',
-    'finalCta.join': 'become a member',
+    'finalCta.join': 'JOIN THE PRO PROGRAM',
 
     // PRO Highlight Section
     'proHighlight.title': 'JOIN OUR ATHLETIC PROGRAM',
@@ -227,7 +227,7 @@ const translations = {
     'proHighlight.development.description': 'Fitness assessments, nutrition management, video breakdown, performance dashboard, and SFR United eligibility.',
     'proHighlight.ceelos.title': 'Train with Ceelos',
     'proHighlight.ceelos.description': 'Learn from a professional who plays on top teams in the sport. His structured program has been refined over 10 years and is backed by real professional experience.',
-    'proHighlight.cta': 'become a member',
+    'proHighlight.cta': 'join the program',
 
     // Services
     'services.title': 'Add on coaching services',
