@@ -50,7 +50,7 @@ const translations = {
 
     // Coach
     'coach.title': 'Want to move on the paintball field like Ceelos?',
-    'coach.body': 'Sign up for the PRO program and access Ceelo\'s 90-day challenge—designed to push your limits and help you become the best version of yourself, on and off the field. You\'ll follow a structured meal plan and workout program that took him over 10 years to refine—backed by his journey to playing on the top professional teams in the sport.',
+    'coach.body': 'Sign up for the PRO program and access Ceelos\' 90-day challenge—designed to push your limits and help you become the best version of yourself, on and off the field. You\'ll follow a structured meal plan and workout program that took him over 10 years to refine—backed by his journey to playing on the top professional teams in the sport.',
     'coach.subtitle': 'We are a field + we have this training system that is run by Ceelos.',
     'coach.cta': 'JOIN THE PRO PROGRAM',
 
@@ -216,7 +216,7 @@ const translations = {
     'proHighlight.subtitle': 'The ultimate paintball training program designed to take your game to the next level. Come find out if you\'re really cut to be PRO',
     'proHighlight.cardDescription': 'Full-access membership for serious competitors ready to go.',
     'proHighlight.challenge.title': '90-Day Challenge',
-    'proHighlight.challenge.description': 'Enroll in Ceelo\'s 90-day challenge with structured meal and workout plans refined over 10 years of professional play.',
+    'proHighlight.challenge.description': 'Enroll in Ceelos\' 90-day challenge with structured meal and workout plans refined over 10 years of professional play.',
     'proHighlight.access.title': 'Extended Field Access',
     'proHighlight.access.description': 'Privileged access to Supra Campus on weekdays and weekend mornings for exclusive training sessions.',
     'proHighlight.coaching.title': 'Pro Coaching',
